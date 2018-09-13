@@ -1,6 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 import './index.less'
+import MTop from './module/m-top/index'
 
 export default class Index extends Component {
 
@@ -20,8 +21,8 @@ export default class Index extends Component {
 
   render () {
     return (
-      <View className='index'>
-        <Text>Hello world!</Text>
+      <View className='m-index'>
+        <MTop/>
       </View>
     )
   }

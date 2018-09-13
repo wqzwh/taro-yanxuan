@@ -1,0 +1,50 @@
+.m-tabs {
+  width: 100%;
+  .m-tabs-bd {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #fff;
+    position: relative;
+    .inner {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      .list {
+        display: inline-flex;
+        height: 80rpx;
+        white-space: nowrap;
+        flex-flow: row nowrap;
+        flex-shrink: 0;
+        padding: 0 20rpx;
+        background: #fff;
+        line-height: 80rpx;
+        .tab {
+          display: inline-block;
+          position: relative;
+          z-index: 1;
+          text-align: center;
+          margin-left: 20rpx;
+          .txt {
+            display: inline-block;
+            padding: 0 20rpx;
+            line-height: 32rpx;
+            font-size: 28rpx;
+            color: #333;
+            text-align: center;
+          }
+        }
+        .tab:nth-child(1) {
+          margin-left: 0;
+        }
+        .tab.active {
+          color: #b4282d;
+          .txt {
+            position: relative;
+            color: #b4282d;
+          }
+        }
+      }
+    }
+  }
+}
