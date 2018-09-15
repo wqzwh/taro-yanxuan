@@ -1,0 +1,79 @@
+.m-goodGrid {
+  height: 512rpx;
+  background-color: #fff;
+  .inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .list {
+    display: flex;
+    height: 490rpx;
+    white-space: nowrap;
+    flex-flow: row nowrap;
+    background: #fff;
+  }
+  .item {
+    position: relative;
+    width: 300rpx;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+    margin-left: 32rpx;
+    display:inline-block;
+    .hd {
+      border-radius: 4rpx;
+      position: relative;
+      z-index: 0;
+      .wraper {
+        background-color: #f4f4f4;
+        padding-bottom: 100%;
+        margin-bottom: 22rpx;
+        position: relative;
+        .wrap-img {
+          background-color: #f4f4f4;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 4rpx 4rpx 0 0;
+          position:absolute;
+        }
+      }
+    }
+    .name {
+      margin-top: 10rpx;
+      text-align: left;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      color: #333;
+      margin-bottom: 10rpx;
+      padding: 0 10rpx;
+      font-size: 30rpx;
+      line-height: 36rpx;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #333;
+    }
+    .newItemDesc {
+      display: block;
+      margin-bottom: 14rpx;
+      font-size: 26rpx;
+      color: #7f7f7f;
+      line-height: 32rpx;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding: 0 10rpx;
+    }
+    .price {
+      line-height: 1;
+      font-size: 30rpx;
+      text-align: left;
+      color: #b4282d;
+      padding: 0 10rpx;
+    }
+  }
+}

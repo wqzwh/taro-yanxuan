@@ -4,9 +4,16 @@ import './index.less'
 
 export default class Icon extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+
+    }
+  }
+
   render () {
     return (
-      <View className='u-icon'></View>
+      <View className={`u-icon u-icon-${this.props.type}`}></View>
     )
   }
 }

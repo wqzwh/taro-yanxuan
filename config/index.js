@@ -1,5 +1,5 @@
 const config = {
-  projectName: 'wx-yanxuan',
+  projectName: 'taro-yanxuan',
   date: '2018-9-12',
   designWidth: 750,
   deviceRatio: {
