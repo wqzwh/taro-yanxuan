@@ -31,6 +31,6 @@
 
 ### 后端服务使用koa2搭建
 
-### pupper爬取基本数据
+### puppeteer爬取基本数据
 
 ### mongodb存储数据
