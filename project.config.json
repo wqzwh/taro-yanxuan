@@ -1,10 +1,10 @@
 {
-	"miniprogramRoot": "./dist",
+	"miniprogramRoot": "dist/",
 	"projectname": "taro-yanxuan",
 	"description": "",
 	"appid": "wxbbf1c5254bb2b45a",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": false,
 		"postcss": false,
 		"minified": false,

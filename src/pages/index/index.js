@@ -12,21 +12,45 @@ import FacturersSupplying from '../../components/FacturersSupplying/index'
 import FloorNewHeader from '../../components/FloorNewHeader/index'
 import GoodGrid from '../../components/GoodGrid/index'
 
+import API from './api'
+
 export default class Index extends Component {
 
   config = {
     navigationBarTitleText: '首页'
   }
 
+  constructor () {
+    this.state = { 
+      bannerList:  []
+    }
+  }
+
   componentWillMount () { }
 
-  componentDidMount () { }
+  componentDidMount () {
+    this.getBanner()
+  }
 
   componentWillUnmount () { }
 
   componentDidShow () { }
 
   componentDidHide () { }
+
+  /** 
+   * 
+   * 获取banner数据
+   * 
+  */
+  getBanner() {
+    API.getBanner().then((res) => {
+      if(res.code !== 200) return
+      this.setState({
+        bannerList: res.data
+      })
+    })
+  }
 
   render () {
     return (
@@ -43,7 +67,7 @@ export default class Index extends Component {
           </View>
         </View>
         <View className="m-indexFloor">
-          <Banner/>
+          <Banner data={this.state.bannerList}/>
           <View className="m-indexServicePolicy">
             <View className="g-grow">
               <View className="item">

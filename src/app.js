@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import Index from './pages/index'
-
+import '@tarojs/async-await'
 import './app.less'
 
 class App extends Component {
