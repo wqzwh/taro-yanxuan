@@ -1,10 +1,13 @@
 const Koa = require('koa')
 const router = require('./routers/index')
-const { connect } = require('./database/init')
+const { connect, initSchemas } = require('./database/init')
 
 
 ;(async () => {
-  await connect()
+  await connect({ useNewUrlParser: true })
+  initSchemas()
+
+  require('./task/task-list')
 })()
 
 const app = new Koa()

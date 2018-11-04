@@ -5,8 +5,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"start": "node server/index.js",
 		"server": "node server/index.js",
-		"pup": "node server/crawler/list.js",
 		"build:weapp": "taro build --type weapp",
 		"build:h5": "taro build --type h5",
 		"build:rn": "taro build --type rn",
