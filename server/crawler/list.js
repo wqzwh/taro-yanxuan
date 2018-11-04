@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer')
-const homeUrl = 'http://m.you.163.com/item/newItem'
+const homeUrl = 'http://m.you.163.com/search?keyword=%E5%A5%B3%E8%A3%85&_stat_search=autoComplete'
 
 const sleep = time => new Promise(reslove => {
   setTimeout(reslove, time)
@@ -17,7 +17,7 @@ const sleep = time => new Promise(reslove => {
     waitUntil: 'networkidle2',
   })
 
-  await sleep(3000)
+  await sleep(10000)
 
   const result = await page.evaluate(() => {
     const $ = window.$
@@ -32,11 +32,11 @@ const sleep = time => new Promise(reslove => {
         let title = it.find('.name span').text()
         let desc = it.find('.newItemDesc').text()
         let price = it.find('.price span span').last().text()
-        let imgUrl = it.find('img').data('src')
+        let imgUrl = it.find('img.swiper-lazy').data('src')
         links.push({
           id,
           title,
-          desc,
+          // desc,
           price,
           imgUrl
         })
@@ -45,7 +45,7 @@ const sleep = time => new Promise(reslove => {
     return links
   })
   browser.close()
-  console.log(result)
-
+  process.send({result})
+  process.exit(0)
 })()
 
