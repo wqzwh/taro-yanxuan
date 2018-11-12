@@ -2,7 +2,7 @@
 const puppeteer = require('puppeteer')
 
 const homeUrl = `http://m.you.163.com/item/detail?id=`
-const detailId = 1636008
+const detailId = 1662033
 
 const sleep = time => new Promise(reslove => {
   setTimeout(reslove, time)

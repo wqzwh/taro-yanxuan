@@ -1,5 +1,7 @@
 const cp = require('child_process')
 const { resolve } = require('path')
+const mongoose = require('mongoose')
+const Product = mongoose.model('Product')
 
 ;(async () => {
   const script = resolve(__dirname, '../crawler/detail')

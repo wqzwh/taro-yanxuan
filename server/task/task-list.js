@@ -1,7 +1,7 @@
 const cp = require('child_process')
 const { resolve } = require('path')
 const mongoose = require('mongoose')
-const List = mongoose.model('List')
+const Product = mongoose.model('Product')
 
 ;(async () => {
   const script = resolve(__dirname, '../crawler/list')
@@ -27,13 +27,13 @@ const List = mongoose.model('List')
     let result = data.result
     
     result.forEach(async item => {
-      let list = await List.findOne({
+      let product = await Product.findOne({
         id: item.id
       })
 
       if(!list) {
-        list = new List(item)
-        await list.save()
+        product = new Product(item)
+        await product.save()
       }
     })
   })

@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const Mixed = Schema.Types.Mixed
 
-const listSchema = new Schema({
+const productSchema = new Schema({
   id: String,
   title: String,
   price: Number,
@@ -10,4 +10,4 @@ const listSchema = new Schema({
   tags: Mixed
 })
 
-mongoose.model('List', listSchema)
+mongoose.model('Product', productSchema)
