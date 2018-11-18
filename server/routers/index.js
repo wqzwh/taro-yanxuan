@@ -1,4 +1,6 @@
 const Router = require('koa-router')
+const mongoose = require('mongoose')
+
 const router = new Router()
 
 router.get('/index/banner', async(ctx, next) => {
@@ -19,6 +21,27 @@ router.get('/index/banner', async(ctx, next) => {
         id: 3
       }
     ]
+  }
+})
+
+router.get('/product/all', async(ctx, next) => {
+  const Product = mongoose.model('Product')
+  const products = await Product.find({}).sort({
+    'meta.createdAt': -1
+  })
+
+  ctx.body = {
+    products
+  }
+})
+
+router.get('/product/:id', async(ctx, next) => {
+  const Product = mongoose.model('Product')
+  const id = ctx.params.id
+  const products = await Product.findOne({_id: id})
+
+  ctx.body = {
+    products
   }
 })
 

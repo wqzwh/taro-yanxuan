@@ -52,6 +52,18 @@ export default class Index extends Component {
     })
   }
 
+  /** 
+   * 
+   * 获取商品数据
+   * 
+  */
+  getProducts() {
+    API.getProducts().then((res) => {
+      // if(res.code !== 200) return
+      console.log(res)
+    })
+  }
+
   render () {
     return (
       <View className='m-index'>
