@@ -40,7 +40,7 @@
 * `server/task` 抓取数据脚本相关主任务文件，以及存储进`mongodb`数据库基本操作
 * `server/base/decorator` 路由装饰器封装类
 * `server/service` 根据路由处理业务逻辑相关代码
-* `server/routers` 路由汇总入口文件
+* `server/routers` 分模块路由存放文件
 
 ### puppeteer爬取基本数据
 

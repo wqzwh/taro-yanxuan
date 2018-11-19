@@ -31,7 +31,7 @@ const Product = mongoose.model('Product')
         id: item.id
       })
 
-      if(!list) {
+      if(!product) {
         product = new Product(item)
         await product.save()
       }
