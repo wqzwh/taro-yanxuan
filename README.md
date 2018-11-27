@@ -33,17 +33,14 @@
 
 使用装饰器特性重新改写`koa-router`的基本用法，将路由层和数据处理层分开编写，进一步进行解耦，基本写法如下：
 ```js
-const mongoose = require('mongoose')
 import { PathPrefix, Get } from '../base/decorator'
+import { getAllProducts, getDetailProducts } from '../service/product'
 
 @PathPrefix('/api/product')
 export default class ProductRouter {
   @Get('/all')
   async getAllProducts(ctx, next) {
-    const Product = mongoose.model('Product')
-    const products = await Product.find({}).sort({
-      'meta.createdAt': -1
-    })
+    const products = await getAllProducts()
 
     ctx.body = {
       code: 200,
@@ -54,9 +51,8 @@ export default class ProductRouter {
 
   @Get('/detail/:id')
   async getDetailProducts(ctx, next) {
-    const Product = mongoose.model('Product')
     const id = ctx.params.id
-    const products = await Product.findOne({_id: id})
+    const products = await getDetailProducts(id)
 
     ctx.body = {
       code: 200,

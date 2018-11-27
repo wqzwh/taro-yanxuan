@@ -1,14 +1,11 @@
-const mongoose = require('mongoose')
 import { PathPrefix, Get } from '../base/decorator'
+import { getAllProducts, getDetailProducts } from '../service/product'
 
 @PathPrefix('/api/product')
 export default class ProductRouter {
   @Get('/all')
   async getAllProducts(ctx, next) {
-    const Product = mongoose.model('Product')
-    const products = await Product.find({}).sort({
-      'meta.createdAt': -1
-    })
+    const products = await getAllProducts()
 
     ctx.body = {
       code: 200,
@@ -19,9 +16,8 @@ export default class ProductRouter {
 
   @Get('/detail/:id')
   async getDetailProducts(ctx, next) {
-    const Product = mongoose.model('Product')
     const id = ctx.params.id
-    const products = await Product.findOne({_id: id})
+    const products = await getDetailProducts(id)
 
     ctx.body = {
       code: 200,
