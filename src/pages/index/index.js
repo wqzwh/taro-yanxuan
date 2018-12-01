@@ -1,11 +1,13 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
+import { View, Image, Text } from '@tarojs/components'
 import './index.less'
 
 import Logo from '../../components/Logo/index'
 import Search from '../../components/Search/index'
 import Tab from '../../components/Tab/index'
 import Banner from '../../components/Banner/index'
+import KingkongCarousel from '../../components/KingkongCarousel/index'
+import HuoDong from '../../components/HuoDong/index';
 import WIcon from '../../components/Icon/index'
 import FloorHeader from '../../components/FloorHeader/index'
 import FacturersSupplying from '../../components/FacturersSupplying/index'
@@ -98,6 +100,8 @@ export default class Index extends Component {
             </View>
           </View>
         </View>
+        <KingkongCarousel/>
+        <HuoDong/>
         <View className="m-indexFloor">
           <FloorHeader/>
           <FacturersSupplying/>

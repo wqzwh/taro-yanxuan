@@ -12,25 +12,25 @@ export default class Tab extends Component {
         label: '推荐'
       },{
         value: 1,
-        label: '推荐'
+        label: '居家'
       },{
         value: 1,
-        label: '推荐'
+        label: '鞋包配饰'
       },{
         value: 1,
-        label: '推荐'
+        label: '服装'
       },{
         value: 1,
-        label: '推荐'
+        label: '电器'
       },{
         value: 1,
-        label: '推荐'
+        label: '洗护'
       },{
         value: 1,
-        label: '推荐'
+        label: '饮食'
       },{
         value: 1,
-        label: '推荐'
+        label: '餐厨'
       }]
     }
   }

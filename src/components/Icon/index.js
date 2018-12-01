@@ -6,9 +6,6 @@ export default class Icon extends Component {
 
   constructor(props) {
     super(props)
-    this.state = {
-
-    }
   }
 
   render () {

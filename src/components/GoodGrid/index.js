@@ -32,11 +32,8 @@ export default class GoodGrid extends Component {
       return <View className="item" key={post.value}>
         <View className="hd">
           <View className="wraper">
-            <Image className="wrap-img" src="http://yanxuan.nosdn.127.net/a3bd704acedfe3904fdf22fe74161096.png?imageView&quality=65&thumbnail=330x330"/>
+            <Image className="wrap-img" src="http://yanxuan.nosdn.127.net/a10ed5c19533c9e1e2abf1d8cb843c24.png?imageView&quality=65&thumbnail=330x330"/>
           </View>
-        </View>
-        <View className="tagWraper">
-          <WIcon type="hd-zq"/>
         </View>
         <View className="name">
           仲秋·拾月 锦时趣蛋黄酥礼盒 60克*8
