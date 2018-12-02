@@ -17,22 +17,22 @@ class App extends Component {
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black',
-      tabBar: {
-        color: '#555',
-        selectedColor: '#E43929',
-        backgroundColor: '#fff',
-        list: [{
-          pagePath: 'pages/index/index',
-          text: '首页',
-          iconPath: 'assets/img/tab.png',
-          selectedIconPath: 'assets/img/tab.png'
-        }, {
-          pagePath: 'pages/cate/index',
-          text: '分类',
-          iconPath: 'assets/img/tab.png',
-          selectedIconPath: 'assets/img/tab.png'
-        }]
-      },
+    },
+    tabBar: {
+      color: '#555',
+      selectedColor: '#E43929',
+      backgroundColor: '#fff',
+      list: [{
+        pagePath: 'pages/index/index',
+        text: '首页',
+        iconPath: './assets/img/ic_menu_choice_nor.png',
+        selectedIconPath: './assets/img/ic_menu_choice_pressed.png'
+      }, {
+        pagePath: 'pages/cate/index',
+        text: '分类',
+        iconPath: './assets/img/ic_menu_sort_nor.png',
+        selectedIconPath: './assets/img/ic_menu_sort_pressed.png'
+      }]
     }
   }
 

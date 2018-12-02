@@ -1,0 +1,100 @@
+page {
+  background: #fff;
+}
+.cate-wrap {
+  .cate-top-search {
+    display: flex;
+    height: 88rpx;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    border-bottom: 1rpx solid #ccc;
+  }
+  .cate-left {
+    position: fixed;
+    top: 88rpx;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    width: 162rpx;
+    background-color: #fff;
+    border-right: 1rpx solid #ccc;
+    height: 100%;
+    .item-wrap {
+      transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
+      transition-duration: 0ms;
+      transform: translate(0, 0) translateZ(0);
+      padding-top: 40rpx;
+      .cate-left-item {
+        width: 100%;
+        height: 50rpx;
+        text-align: center;
+        color: #333;
+        font-size: 28rpx;
+        line-height: 50rpx;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 40rpx;
+      }
+      .cate-left-item.selected {
+        color: #ab2b2b;
+      }
+      .cate-left-item.selected::before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 6rpx;
+        background-color: #ab2b2b;
+      }
+    }
+  }
+  .cate-right {
+    margin-left: 162rpx;
+    padding: 30rpx 30rpx 20rpx;
+    margin-top: 88rpx;
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 192rpx;
+      display: table;
+      margin-bottom: 32rpx;
+      background: center no-repeat #f4f4f4;
+      background-size: cover;
+      border-radius: 4rpx;
+      image {
+        height: 192rpx;
+        width: 528rpx;
+      }
+    }
+    .cate-right-wrap {
+      display: flex;
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        margin-right: 34rpx;
+        image {
+          width: 144rpx;
+          height: 144rpx;
+        }
+        .txt {
+          font-size: 24rpx;
+          color: #333;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+      }
+    }
+  }
+}

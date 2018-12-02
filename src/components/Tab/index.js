@@ -9,7 +9,8 @@ export default class Tab extends Component {
     this.state = {
       tabData: [{
         value: 1,
-        label: '推荐'
+        label: '推荐',
+        selected: true
       },{
         value: 1,
         label: '居家'
@@ -34,15 +35,10 @@ export default class Tab extends Component {
       }]
     }
   }
-
-  onClick = (e) => {
-    console.log(e)
-  }
-
   render () {
     const scrollCon = this.tabData.map((post) => {
       return <View className="tab" key={post.value}>
-        <Text className="txt">{post.label}</Text>
+        <Text className={post.selected ? 'txt selected' : 'txt'}>{post.label}</Text>
       </View>
     })
     return (
