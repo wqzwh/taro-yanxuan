@@ -31,9 +31,10 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "111",
-					"pathName": "pages/cate/index"
+					"id": 0,
+					"name": "分类页面",
+					"pathName": "pages/cate/index",
+					"query": ""
 				}
 			]
 		}

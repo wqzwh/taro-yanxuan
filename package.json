@@ -18,12 +18,12 @@
 	"author": "wangqi",
 	"license": "MIT",
 	"dependencies": {
-		"@tarojs/async-await": "1.2.0-beta.3",
-		"@tarojs/components": "1.2.0-beta.3",
-		"@tarojs/router": "1.2.0-beta.3",
-		"@tarojs/taro": "1.2.0-beta.3",
-		"@tarojs/taro-h5": "1.2.0-beta.3",
-		"@tarojs/taro-weapp": "1.2.0-beta.3",
+		"@tarojs/async-await": "1.2.0-beta.11",
+		"@tarojs/components": "1.2.0-beta.11",
+		"@tarojs/router": "1.2.0-beta.11",
+		"@tarojs/taro": "1.2.0-beta.11",
+		"@tarojs/taro-h5": "1.2.0-beta.11",
+		"@tarojs/taro-weapp": "1.2.0-beta.11",
 		"koa": "^2.6.1",
 		"koa-router": "^7.4.0",
 		"mongoose": "^5.3.9",
@@ -31,11 +31,11 @@
 		"puppeteer": "^1.10.0"
 	},
 	"devDependencies": {
-		"@tarojs/plugin-babel": "1.2.0-beta.3",
-		"@tarojs/plugin-csso": "1.2.0-beta.3",
-		"@tarojs/plugin-less": "1.2.0-beta.3",
-		"@tarojs/plugin-uglifyjs": "1.2.0-beta.3",
-		"@tarojs/webpack-runner": "1.2.0-beta.3",
+		"@tarojs/plugin-babel": "1.2.0-beta.11",
+		"@tarojs/plugin-csso": "1.2.0-beta.11",
+		"@tarojs/plugin-less": "1.2.0-beta.11",
+		"@tarojs/plugin-uglifyjs": "1.2.0-beta.11",
+		"@tarojs/webpack-runner": "1.2.0-beta.11",
 		"@types/react": "16.3.14",
 		"@types/webpack-env": "^1.13.6",
 		"babel-core": "^6.26.3",
@@ -49,9 +49,9 @@
 		"babel-preset-env": "^1.7.0",
 		"babel-preset-stage-0": "^6.24.1",
 		"eslint": "^4.19.1",
-		"eslint-config-taro": "1.2.0-beta.3",
+		"eslint-config-taro": "1.2.0-beta.11",
 		"eslint-plugin-import": "^2.12.0",
 		"eslint-plugin-react": "^7.8.2",
-		"eslint-plugin-taro": "1.2.0-beta.3"
+		"eslint-plugin-taro": "1.2.0-beta.11"
 	}
 }
