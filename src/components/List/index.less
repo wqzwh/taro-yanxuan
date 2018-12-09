@@ -1,0 +1,69 @@
+.list-wrap {
+  .list-top {
+    display: flex;
+    justify-content: center;
+    height: 120rpx;
+    text-align: center;
+    background-color: #fff;
+    align-items: center;
+    flex-direction: column;
+    .list-name {
+      font-size: 32rpx;
+    }
+    .list-desc {
+      margin-top: 16rpx;
+      line-height: 1;
+      color: #999;
+      font-size: 24rpx;
+    }
+  }
+  .list-goods {
+    background-color: #fff;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    .list-item {
+      float: left;
+      position: relative;
+      width: 50%;
+      padding: 0 20rpx 33rpx 10rpx;
+      overflow: hidden;
+      background-color: #fff;
+      box-sizing:border-box;
+      .goods {
+        image {
+          border-radius: 4rpx;
+          display: block;
+          width: 100%;
+          height: 400rpx;
+          background-color: #f4f4f4;
+        }
+        .goods-title {
+          margin-top: 16rpx;
+          line-height: 40rpx;
+          font-size: 28rpx;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          color: #333;
+        }
+        .goods-price {
+          font-size: 32rpx;
+          line-height: 48rpx;
+          color: #b4282d;
+        }
+        .tag-wrap {
+          width: 100%;
+          z-index: 1;
+          margin-top: 4rpx;
+          height: 35rpx;
+          line-height: 31rpx;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+.list-goods .list-item:nth-child(2n+1) {
+  padding: 0 10rpx 33rpx 20rpx;
+}

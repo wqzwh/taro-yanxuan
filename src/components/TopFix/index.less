@@ -1,0 +1,29 @@
+.top-fix-wrap {
+  position: relative;
+  height: 87rpx;
+  background-color: #fafafa;
+  .top-fix-row {
+    z-index: 1;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    padding: 0 16rpx 0 24rpx;
+    height: 88rpx;
+    display: -webkit-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+  }
+}
+.top-fix-wrap::after {
+  position: absolute;
+  background-color: #d9d9d9;
+  width: 100%;
+  height: 1px;
+  transform-origin: 50% 100% 0;
+  bottom: 0;
+}
