@@ -19,7 +19,7 @@ export default class List extends Component {
     const imgUrl = `${ASSETSURL}/img/list-banner.jpg`
     return (
       <View className='list-wrap'>
-        <TopFix/>
+        <TopFix isFixed/>
         <View className='list-banner'>
           <Image src={imgUrl} />
         </View>

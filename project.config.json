@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
@@ -40,6 +40,12 @@
 					"id": -1,
 					"name": "列表页面",
 					"pathName": "pages/list/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "详情页面",
+					"pathName": "pages/detail/index",
 					"query": ""
 				}
 			]
