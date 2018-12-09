@@ -13,6 +13,7 @@ import FloorHeader from '../../components/FloorHeader/index'
 import FacturersSupplying from '../../components/FacturersSupplying/index'
 import FloorNewHeader from '../../components/FloorNewHeader/index'
 import GoodGrid from '../../components/GoodGrid/index'
+import Modal from '../../components/Modal/index'
 
 import API from './api'
 
@@ -24,7 +25,8 @@ export default class Index extends Component {
 
   constructor () {
     this.state = { 
-      bannerList:  []
+      bannerList:  [],
+      isOpened: false
     }
   }
 
@@ -33,6 +35,9 @@ export default class Index extends Component {
   componentDidMount () {
     this.getBanner()
     this.getProducts()
+    this.setState({
+      isOpened: true
+    })
   }
 
   componentWillUnmount () { }
@@ -67,7 +72,19 @@ export default class Index extends Component {
     })
   }
 
-  render () {
+  /** 
+   * 
+   * 关闭弹窗
+   * 
+  */
+  onClose() {
+    this.setState({
+      isOpened: false
+    })
+  }
+
+  render() {
+    const { isOpened } = this.state
     return (
       <View className='m-index'>
         <View className="hdWraper">
@@ -110,6 +127,7 @@ export default class Index extends Component {
           <FloorNewHeader/>
           <GoodGrid/>
         </View>
+        <Modal onClose={this.onClose} isOpened={isOpened}/>
       </View>
     )
   }
