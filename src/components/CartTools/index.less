@@ -1,0 +1,48 @@
+.tools-wrap {
+  .tools-row {
+    display: flex;
+    .btn {
+      flex-grow: 1;
+      border-right: 0;
+      align-items: center;
+      justify-content: center;
+      height: 104rpx;
+      display: inline-block;
+      vertical-align: middle;
+      width: 297rpx;
+      text-align: center;
+      line-height: 96rpx;
+      font-size: 28rpx;
+      border-radius: 4rpx;
+      overflow: hidden;
+    }
+    .pay {
+      border-color: #c7c7c7;
+      color: #333;
+      background-color: #fff;
+    }
+    .cart {
+      border: 1rpx solid #b4282d;
+      background-color: #b4282d;
+      color: #fff;
+    }
+    .kefu {
+      flex-grow: 0;
+      width: 156rpx;
+      border-right: 1rpx solid #c7c7c7;
+      color: #333;
+      background-color: #fff;
+    }
+    .btn::after {
+      border: none;
+    }
+  }
+}
+
+.tools-fix {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  z-index: 999;
+}

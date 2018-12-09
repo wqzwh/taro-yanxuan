@@ -40,8 +40,7 @@ export default class Modal extends Component {
       'modal-wrap',
       {
         'modal-wrap-open': _isOpened
-      },
-      this.props.className
+      }
     )
     const bgImg = `background-image: url('${ASSETSURL}/img/modal-bg.png') no-repeat`
     return (

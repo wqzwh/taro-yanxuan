@@ -9,11 +9,80 @@ export default class GList extends Component {
   constructor(props) {
     super(...arguments)
     this.state = {
-
+      listData: [
+        {
+          url: 'http://yanxuan.nosdn.127.net/4a00fd1035efe874d70d51dfc04c5cee.png?imageView&quality=65&thumbnail=330x330',
+          title: '猪莉·粉糖四件套',
+          price: '399',
+          type: 'new'
+        },
+        {
+          url: 'http://yanxuan.nosdn.127.net/4a00fd1035efe874d70d51dfc04c5cee.png?imageView&quality=65&thumbnail=330x330',
+          title: '猪莉·粉糖四件套',
+          price: '399',
+          type: 'th'
+        },
+        {
+          url: 'http://yanxuan.nosdn.127.net/4a00fd1035efe874d70d51dfc04c5cee.png?imageView&quality=65&thumbnail=330x330',
+          title: '猪莉·粉糖四件套',
+          price: '399',
+          type: 'new'
+        },
+        {
+          url: 'http://yanxuan.nosdn.127.net/4a00fd1035efe874d70d51dfc04c5cee.png?imageView&quality=65&thumbnail=330x330',
+          title: '猪莉·粉糖四件套',
+          price: '399',
+          type: 'new'
+        },
+        {
+          url: 'http://yanxuan.nosdn.127.net/4a00fd1035efe874d70d51dfc04c5cee.png?imageView&quality=65&thumbnail=330x330',
+          title: '猪莉·粉糖四件套',
+          price: '399',
+          type: 'new'
+        },
+        {
+          url: 'http://yanxuan.nosdn.127.net/4a00fd1035efe874d70d51dfc04c5cee.png?imageView&quality=65&thumbnail=330x330',
+          title: '猪莉·粉糖四件套',
+          price: '399',
+          type: 'th'
+        },
+        {
+          url: 'http://yanxuan.nosdn.127.net/4a00fd1035efe874d70d51dfc04c5cee.png?imageView&quality=65&thumbnail=330x330',
+          title: '猪莉·粉糖四件套',
+          price: '399',
+          type: 'new'
+        },
+        {
+          url: 'http://yanxuan.nosdn.127.net/4a00fd1035efe874d70d51dfc04c5cee.png?imageView&quality=65&thumbnail=330x330',
+          title: '猪莉·粉糖四件套',
+          price: '399',
+          type: 'th'
+        },
+        {
+          url: 'http://yanxuan.nosdn.127.net/4a00fd1035efe874d70d51dfc04c5cee.png?imageView&quality=65&thumbnail=330x330',
+          title: '猪莉·粉糖四件套',
+          price: '399',
+          type: 'new'
+        }
+      ]
     }
   }
 
   render() {
+    const { listData } = this.state
+    const listItem = listData.map((item, index) => {
+      return <View className='list-item' key={index}>
+        <View className='goods'>
+          <Image src={item.url}/>
+          <View className='goods-title'>{item.title}</View>
+          <View className='goods-price'>¥{item.price}</View>
+          <View className='tag-wrap'>
+            {item.type === 'new' && <Tags tagName='新品' />}
+            {item.type === 'th' && <Tags tagName='特惠' />}
+          </View>
+        </View>
+      </View>
+    })
     return (
       <View className='list-wrap'>
         <View className='list-top'>
@@ -21,50 +90,7 @@ export default class GList extends Component {
           <View className='list-desc'>{this.props.desc}</View>
         </View>
         <View className='list-goods'>
-          <View className='list-item'>
-            <View className='goods'>
-              <Image src="http://yanxuan.nosdn.127.net/4a00fd1035efe874d70d51dfc04c5cee.png?imageView&quality=65&thumbnail=330x330"/>
-              <View className='goods-title'>猪莉·粉糖四件套</View>
-              <View className='goods-price'>¥399</View>
-              <View className='tag-wrap'>
-                <Tags tagName='新品' />
-                <Tags tagName='特惠' />
-              </View>
-            </View>
-          </View>
-          <View className='list-item'>
-            <View className='goods'>
-              <Image src="http://yanxuan.nosdn.127.net/4a00fd1035efe874d70d51dfc04c5cee.png?imageView&quality=65&thumbnail=330x330"/>
-              <View className='goods-title'>猪莉·粉糖四件套</View>
-              <View className='goods-price'>¥399</View>
-              <View className='tag-wrap'>
-                <Tags tagName='新品' />
-                <Tags tagName='特惠' />
-              </View>
-            </View>
-          </View>
-          <View className='list-item'>
-            <View className='goods'>
-              <Image src="http://yanxuan.nosdn.127.net/4a00fd1035efe874d70d51dfc04c5cee.png?imageView&quality=65&thumbnail=330x330"/>
-              <View className='goods-title'>猪莉·粉糖四件套</View>
-              <View className='goods-price'>¥399</View>
-              <View className='tag-wrap'>
-                <Tags tagName='新品' />
-                <Tags tagName='特惠' />
-              </View>
-            </View>
-          </View>
-          <View className='list-item'>
-            <View className='goods'>
-              <Image src="http://yanxuan.nosdn.127.net/4a00fd1035efe874d70d51dfc04c5cee.png?imageView&quality=65&thumbnail=330x330"/>
-              <View className='goods-title'>猪莉·粉糖四件套</View>
-              <View className='goods-price'>¥399</View>
-              <View className='tag-wrap'>
-                <Tags tagName='新品' />
-                <Tags tagName='特惠' />
-              </View>
-            </View>
-          </View>
+          {listItem}
         </View>
       </View>
     )
