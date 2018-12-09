@@ -12,33 +12,46 @@ export default class Tab extends Component {
         label: '推荐',
         selected: true
       },{
-        value: 1,
+        value: 2,
         label: '居家'
       },{
-        value: 1,
+        value: 3,
         label: '鞋包配饰'
       },{
-        value: 1,
+        value: 4,
         label: '服装'
       },{
-        value: 1,
+        value: 5,
         label: '电器'
       },{
-        value: 1,
+        value: 6,
         label: '洗护'
       },{
-        value: 1,
+        value: 7,
         label: '饮食'
       },{
-        value: 1,
+        value: 8,
         label: '餐厨'
       }]
     }
   }
+  selected(item, e) {
+    const { tabData } = this.state
+    for(let v of tabData) {
+      if(v.value === item.value) {
+        v.selected = true
+      } else {
+        v.selected = false
+      }
+    }
+    this.setState({
+      leftNav: this.state.tabData
+    })
+  }
   render () {
-    const scrollCon = this.tabData.map((post) => {
-      return <View className="tab" key={post.value}>
-        <Text className={post.selected ? 'txt selected' : 'txt'}>{post.label}</Text>
+    const scrollCon = this.tabData.map((item) => {
+      return <View className="tab" key={item.value} onClick={this.selected.bind(this, item)}>
+        <Text className={item.selected ? 'txt selected' : 'txt'}>{item.label}</Text>
       </View>
     })
     return (
